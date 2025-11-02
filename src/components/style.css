@@ -40,5 +40,6 @@
   background-color: rgb(33, 221, 52);
 }
 .dataTitle {
-  margin: 1em;
+  margin: 10px;
+  padding-top: 10px;
 }
