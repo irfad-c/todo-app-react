@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 
-const AddTask = ({ updateDatas }) => {
+const AddTask = ({ updateData }) => {
   const [value, setValue] = useState("");
-
   const addToList = () => {
-    updateDatas(value);
+    //Here value travels from parent to child.
+    updateData(value);
     setValue("");
   };
 
   return (
     <div className="addTaskContainer">
-      <h2 className="heading"> AddTask</h2>
+      <h2 className="heading">AddTask</h2>
 
       <div>
         <input
           value={value}
           onChange={(e) => setValue(e.target.value)}
           className="input-box"
-          placeholder="type here"
+          placeholder="Type here"
         ></input>
         <button onClick={addToList} className="add-btn">
           Add
