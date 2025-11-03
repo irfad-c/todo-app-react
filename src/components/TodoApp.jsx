@@ -1,5 +1,5 @@
 //This is the parent file.
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AddTask from "./AddTask";
 import ListTask from "./ListTask";
 import "./style.css";
@@ -27,6 +27,11 @@ const TodoApp = () => {
     setData(newArray)
 }
 */
+
+  useEffect(() => {
+    document.title = `You have ${datas.length} pending task`;
+  }, [datas]);
+
   return (
     <div className="todo-container">
       <h1>To Do App</h1>
